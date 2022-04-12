@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function checkGrade(){
+        scoreOfUser=scoreEntered.value
+        if(scoreOfUser >=70 && scoreOfUser <=100){
+            disr.innerText ='A'
+            // alert("A")
+        } else if(scoreOfUser >=60 && scoreOfUser <=70 ){
+            disr.innerText ='B'
+            // alert("B")
+        }
+         else if(scoreOfUser >=50 && scoreOfUser <=60 ){
+            disr.innerText ='C'
+            // alert("C")
+        }
+        else if(scoreOfUser >=45 && scoreOfUser <=50 ){
+            disr.innerText ='D'
+            // alert("D")
+        }
+        else if(scoreOfUser >=40 && scoreOfUser <=45 ){
+            disr.innerText ='E'
+            // alert("E")
+        }
+        else if(scoreOfUser <=39 && scoreOfUser >=1 ){
+            disr.innerText ='F'
+            // alert("F")
+        }
+        else if(scoreOfUser >100){
+            disr.innerText ='Invaild Input'
+            // alert("Invaild Input")
+        }
+        else if(scoreOfUser=" "){
+            disr.innerText ='Error'
+            // alert("Error")
+            location.reload
+        }
+    }
+</script>
+<body>
+    <center>
+        <table border="10px" width="700px" height="400px" style="background-color: lightpink;">
+       <tr>
+           <td><input type="text" id="scoreEntered" style="width: 300px; height: 50px;margin-left: 170px;margin-bottom: 200px;text-align: center; font-size: large;" placeholder="Input Your Score"> 
+             <div id="disr" style="font-size:25px;font-family: Arial, Helvetica, sans-serif;width: 200px;height: 50px;border: 2px;background-color: blue; margin-left:230px;color: white;text-align: center;">
+            </div>
+            <br>
+            <button style="box-shadow:blue;margin-left: 280px;" onclick="checkGrade()">
+                Check Grade
+            </button></td>
+       </tr> 
+    </table>
+    </center>
+</body>
+</html>
